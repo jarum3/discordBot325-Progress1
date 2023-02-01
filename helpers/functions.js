@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
 module.exports = {
-  createRole: function (guildId, roleName, color) {
+  createRole: function (guild, roleName, color) {
     // Create a new role
-    const role = guildId.roles.create({
+    guild.roles.create({
       name: roleName,
       color: color,
     })
-      .then(console.log)
-      .catch(console.error);
-    return role.roleId;
+      .then(console.log())
+      .catch(console.error());
+    // return guildId.roles.cache.find(role => role.name === roleName);
   },
   createCategory: function (categoryName, roleId) {
     return 0;

@@ -16,7 +16,7 @@ module.exports = {
     const name = interaction.options.getString('name');
     const color = interaction.options.getString('color');
     // Create a new role
-    funcs.createRole(name, color);
+    funcs.createRole(interaction.guild, name, color);
 
     await interaction.reply('New role created!');
   },
