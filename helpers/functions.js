@@ -8,18 +8,22 @@ module.exports = {
     })
       .then(console.log())
       .catch(console.error());
-    // return guildId.roles.cache.find(role => role.name === roleName);
+    return guild.roles.cache.find(role => role.name === roleName);
   },
   createCategory: function (categoryName, roleId) {
+    // TODO
     return 0;
   },
   createChannel: function (channelName, categoryId) {
+    // TODO
     return 0;
   },
   getSemester: function () {
+    // TODO
     return 0;
   },
   archiveCategory: function (categoryId) {
+    // TODO
     return 0;
   },
 };
