@@ -40,7 +40,7 @@ class VeteranRole extends Role {
   }
 
   archiveCategory(categoryId) {
-    // TODO
+    // TODO Archive category
     return 0;
   }
 }

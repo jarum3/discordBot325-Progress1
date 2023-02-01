@@ -11,19 +11,19 @@ module.exports = {
     return guild.roles.cache.find(role => role.name === roleName);
   },
   createCategory: function (categoryName, roleId) {
-    // TODO
+    // TODO Create category
     return 0;
   },
   createChannel: function (channelName, categoryId) {
-    // TODO
-    return 0;
-  },
-  getSemester: function () {
-    // TODO
+    // TODO Create channel
     return 0;
   },
   archiveCategory: function (categoryId) {
-    // TODO
+    // TODO Archive a category
+    return 0;
+  },
+  getSemester: function () {
+    // TODO Get current semester
     return 0;
   },
 };
