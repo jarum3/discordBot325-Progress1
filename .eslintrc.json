@@ -98,7 +98,7 @@
     ],
     "space-before-blocks": "warn",
     "space-before-function-paren": [
-      "error",
+      "off",
       {
         "anonymous": "never",
         "named": "never",
