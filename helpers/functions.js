@@ -6,7 +6,7 @@ module.exports = {
       name: roleName,
       color: color,
     })
-      .then(console.log())
+      .then(role => console.log('Role created: ' + role.name))
       .catch(console.error());
     return guild.roles.cache.find(role => role.name === roleName);
   },
@@ -29,5 +29,13 @@ module.exports = {
   appendRoleToDisk: function (role, file) {
     // TODO Write data passed as an object to JSON, append to file given.
     return 0;
+  },
+  isColor: function (strColor) {
+    const { Colors } = require('discord.js');
+    const RegExp = /(^#?[0-9A-F]{6}$)|(^#?[0-9A-F]{3}$)/i; // Regex to check if the input is a valid hex code.
+    return Object.keys(Colors).includes(this.capitalizeString(strColor)) || RegExp.test(strColor);
+  },
+  capitalizeString: function (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   },
 };

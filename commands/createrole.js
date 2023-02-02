@@ -16,8 +16,12 @@ module.exports = {
     const name = interaction.options.getString('name');
     const color = interaction.options.getString('color');
     // Create a new role
-    funcs.createRole(interaction.guild, name, color);
-
-    await interaction.reply('New role created!');
+    if (funcs.isColor(color)) {
+      funcs.createRole(interaction.guild, name, color);
+      await interaction.reply('New role created!');
+    }
+    else {
+      await interaction.reply('That color code is invalid.');
+    }
   },
 };
