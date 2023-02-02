@@ -26,4 +26,8 @@ module.exports = {
     // TODO Get current semester
     return 0;
   },
+  appendRoleToDisk: function (role, file) {
+    // TODO Write data passed as an object to JSON, append to file given.
+    return 0;
+  },
 };
