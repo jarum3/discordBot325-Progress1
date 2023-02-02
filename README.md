@@ -15,4 +15,5 @@ GUILD_ID="[The server that should receive your list of commands to display to us
 1. Adding in class definition and skeletons for roles, with course roles, optional roles, and veteran roles all extending from that role class.
 2. Adding functions to create channels to be used programmatically when creating categories and populating them.
 3. Starting on functions to create and populate categories given some course data.
-4. Creating specifications for user interfaces going forward, with text parameters being mostly used for administrative work and a drop-down for students.
+4. Adding empty file to start on testing interface.
+5. Updating readme to include .env details
