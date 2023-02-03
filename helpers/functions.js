@@ -18,6 +18,7 @@ module.exports = {
     })
       .then(category => console.log('Created category: ' + category.name))
       .catch(category => console.error('Error created category: ' + category.name));
+    // TODO lock permissions to the given role object
     return createdCategory;
   },
   createChannel: async function (guild, channelName, category) {
