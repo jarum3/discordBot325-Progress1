@@ -1,22 +1,36 @@
 /* eslint-disable no-unused-vars */
 module.exports = {
-  createRole: function (guild, roleName, color) {
+  createRole: async function (guild, roleName, color) {
     // Create a new role
-    guild.roles.create({
+    const createdRole = await guild.roles.create({
       name: roleName,
       color: color,
     })
       .then(role => console.log('Role created: ' + role.name))
       .catch(console.error());
-    return guild.roles.cache.find(role => role.name === roleName);
+    return createdRole;
   },
-  createCategory: function (categoryName, roleId) {
-    // TODO Create category
-    return 0;
+  createCategory: async function (guild, categoryName, role) {
+    const { ChannelType } = require('discord.js');
+    const createdCategory = await guild.channels.create({
+      name: categoryName,
+      type: ChannelType.GuildCategory,
+    })
+      .then(category => console.log('Created category: ' + category.name))
+      .catch(category => console.error('Error created category: ' + category.name));
+    return createdCategory;
   },
-  createChannel: function (channelName, categoryId) {
-    // TODO Create channel
-    return 0;
+  createChannel: async function (guild, channelName, category) {
+    const { ChannelType } = require('discord.js');
+    const createdChannel = await guild.channels.create({
+      name: channelName,
+      type: ChannelType.GuildText,
+    })
+      .then(channel => console.log('Created channel: ' + channel.name))
+      .catch(channel => console.error('Error created category: ' + channel.name));
+    createdChannel.setParent(category);
+    createdChannel.lockPermissions();
+    return createdChannel;
   },
   archiveCategory: function (categoryId) {
     // TODO Archive a category
