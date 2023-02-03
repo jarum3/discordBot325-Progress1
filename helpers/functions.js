@@ -18,7 +18,7 @@ module.exports = {
     })
       .then(category => console.log('Created category: ' + category.name))
       .catch(category => console.error('Error created category: ' + category.name));
-    // TODO lock permissions to the given role object
+    // TODO #1 lock permissions to the given role object
     return createdCategory;
   },
   createChannel: async function (guild, channelName, category) {
@@ -33,16 +33,16 @@ module.exports = {
     createdChannel.lockPermissions();
     return createdChannel;
   },
-  archiveCategory: function (categoryId) {
-    // TODO Archive a category
+  archiveCategory: function (category) {
+    // TODO #2 Archive a category
     return 0;
   },
   getSemester: function () {
-    // TODO Get current semester
+    // TODO #3 Get current semester
     return 0;
   },
   appendRoleToDisk: function (role, file) {
-    // TODO Write data passed as an object to JSON, append to file given.
+    // TODO #4 Write data passed as an object to JSON, append to file given.
     return 0;
   },
   isColor: function (strColor) {
