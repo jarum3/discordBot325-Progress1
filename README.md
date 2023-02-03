@@ -10,6 +10,10 @@ CLIENT_TOKEN='[Token from bot through the discord dev portal]'
 CLIENT_ID="[The bot user's ID]"
 ```
 
+## Deploying commands
+Since Discord puts a rate limit to the number of times you can submit commands in a given day, that's handled in a separate file. 
+Run `deploy-commands.js` after adding any new command files, or on a new bot.
+
 # Updates from previous starting point
 1. Adding in class definition and skeletons for roles, with course roles, optional roles, and veteran roles all extending from that role class.
 2. Adding functions to create channels to be used programmatically when creating categories and populating them.
