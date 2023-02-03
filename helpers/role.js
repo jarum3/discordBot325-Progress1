@@ -25,7 +25,7 @@ class CourseRole extends Role {
     funcs.createChannel('zoom-meeting-info-' + this.number, this.categoryId);
     if (video) {
       funcs.createChannel('how-to-make-a-video', this.categoryId);
-      // TODO: Fill with messages
+      // TODO: #5 Fill with messages
     }
     funcs.createChannel('introduce-yourself', this.categoryId);
     funcs.createChannel('chat', this.categoryId);
@@ -40,7 +40,9 @@ class VeteranRole extends Role {
   }
 
   archiveCategory(categoryId) {
-    // TODO Archive category
+    const { archiveCategory } = require('./functions');
+    // TODO #6 edit this so that it can pass in its own category as a category object
+    archiveCategory(this.categoryId);
     return 0;
   }
 }
